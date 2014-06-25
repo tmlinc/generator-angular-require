@@ -65,7 +65,7 @@ var Generator = module.exports = function Generator(args, options) {
     }
 
     if (this.routeModule) {
-      enabledComponents.push('angular-route/angular-route.js');
+      enabledComponents.push('ui-router/release/angular-ui-router.js');
     }
 
     this.invoke('karma-require:app', {
