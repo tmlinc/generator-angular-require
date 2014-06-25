@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" id="ng-app" ng-app=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" id="ng-app" ng-app=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" ng-app> <!--<![endif]-->
@@ -23,8 +23,8 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <% if (ngRoute) {
-      %><div class="container" ng-view></div><%
+    <% if (uiRouter) {
+      %><div class="container" ui-view></div><%
     } else {
       %><div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div><%
     } %>

@@ -1,16 +1,16 @@
 /*jshint unused: vars */
 define(['angular']/*deps*/, function (angular)/*invoke*/ {
-  'use strict';
+    'use strict';
 
-  return angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (ngRoute) { %>
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/', {
-          templateUrl: 'views/main.html',
-          controller: 'MainCtrl'
-        })
-        .otherwise({
-          redirectTo: '/'
-        });
-    })<% } %>;
+    return angular.module('<%= scriptAppName %>', [/*angJSDeps*/<%= angularModules %>])<% if (uiRouter) { %>
+      .config(function ($stateProvider, $urlRouterProvider) {
+          $urlRouterProvider.otherwise('/');
+        
+          $stateProvider
+              .state('index', {
+                  url: '/',
+                  templateUrl: 'views/main.html',
+                  controller: 'MainCtrl'
+              });
+      });<% } %>;
 });

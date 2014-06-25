@@ -156,9 +156,13 @@ Generator.prototype.askForModules = function askForModules() {
       name: 'angular-sanitize.js',
       checked: true
     }, {
-      value: 'routeModule',
-      name: 'angular-route.js',
-      checked: true
+    //  value: 'routeModule',
+    //  name: 'angular-route.js',
+    //  checked: true
+    //}, {
+        value: 'routeModule',
+        name: 'angular-ui-router.js',
+        checked: true
     }]
   }];
 
@@ -181,9 +185,13 @@ Generator.prototype.askForModules = function askForModules() {
     if (this.sanitizeModule) {
       angMods.push("'ngSanitize'");
     }
+    //if (this.routeModule) {
+    //  angMods.push("'uiRouter'");
+    //  this.env.options.uiRouter = true;
+    //}
     if (this.routeModule) {
-      angMods.push("'ngRoute'");
-      this.env.options.ngRoute = true;
+        angMods.push("'ui.router'");
+        this.env.options.uiRouter = true;
     }
 
     if (angMods.length) {
@@ -195,7 +203,7 @@ Generator.prototype.askForModules = function askForModules() {
 };
 
 Generator.prototype.readIndex = function readIndex() {
-  this.ngRoute = this.env.options.ngRoute;
+  this.uiRouter = this.env.options.uiRouter;
   this.indexFile = this.engine(this.read('../../templates/common/index.html'), this);
 };
 
