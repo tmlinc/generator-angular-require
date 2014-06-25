@@ -4,8 +4,8 @@ require.config({
     
   },
   shim: {
-    'angular' : {'exports' : 'angular'}<% if (routeModule) { %>,
-    'angular-route': ['angular']<% } %><% if (cookiesModule) { %>,
+    'angular' : {'exports' : 'angular'}<% if (stateModule) { %>,
+    'uiRouter': ['angular']<% } %><% if (cookiesModule) { %>,
     'angular-cookies': ['angular']<% } %><% if (sanitizeModule) { %>,
     'angular-sanitize': ['angular']<% } %><% if (resourceModule) { %>,
     'angular-resource': ['angular']<% } %>,
@@ -24,12 +24,12 @@ window.name = 'NG_DEFER_BOOTSTRAP!';
 
 require([
   'angular',
-  'app'<% if (routeModule) { %>,
-  'angular-route'<% } %><% if (cookiesModule) { %>,
+  'app'<% if (stateModule) { %>,
+  'uiRouter'<% } %><% if (cookiesModule) { %>,
   'angular-cookies'<% } %><% if (sanitizeModule) { %>,
   'angular-sanitize'<% } %><% if (resourceModule) { %>,
   'angular-resource'<% } %>
-], function(angular, app<% if (routeModule) { %>, ngRoutes<% } %><% if (cookiesModule) { %>, ngCookies<% } %><% if (sanitizeModule) { %>, ngSanitize<% } %><% if (resourceModule) { %>, ngResource<% } %>) {
+], function(angular, app<% if (stateModule) { %>, ngRoutes<% } %><% if (cookiesModule) { %>, ngCookies<% } %><% if (sanitizeModule) { %>, ngSanitize<% } %><% if (resourceModule) { %>, ngResource<% } %>) {
   'use strict';
   /* jshint ignore:start */
   var $html = angular.element(document.getElementsByTagName('html')[0]);

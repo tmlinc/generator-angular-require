@@ -17,7 +17,7 @@ requirejs.config({
     },
 
     shim: {
-        'angular' : {'exports' : 'angular'}<% if (routeModule) { %>,
+        'angular' : {'exports' : 'angular'}<% if (stateModule) { %>,
         'angular-route': ['angular']<% } %><% if (cookiesModule) { %>,
         'angular-cookies': ['angular']<% } %><% if (sanitizeModule) { %>,
         'angular-sanitize': ['angular']<% } %><% if (resourceModule) { %>,

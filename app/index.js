@@ -64,7 +64,7 @@ var Generator = module.exports = function Generator(args, options) {
       enabledComponents.push('angular-sanitize/angular-sanitize.js');
     }
 
-    if (this.routeModule) {
+    if (this.stateModule) {
       enabledComponents.push('ui-router/release/angular-ui-router.js');
     }
 
@@ -156,11 +156,11 @@ Generator.prototype.askForModules = function askForModules() {
       name: 'angular-sanitize.js',
       checked: true
     }, {
-    //  value: 'routeModule',
+    //  value: 'stateModule',
     //  name: 'angular-route.js',
     //  checked: true
     //}, {
-        value: 'routeModule',
+        value: 'stateModule',
         name: 'angular-ui-router.js',
         checked: true
     }]
@@ -171,7 +171,7 @@ Generator.prototype.askForModules = function askForModules() {
     this.resourceModule = hasMod('resourceModule');
     this.cookiesModule = hasMod('cookiesModule');
     this.sanitizeModule = hasMod('sanitizeModule');
-    this.routeModule = hasMod('routeModule');
+    this.stateModule = hasMod('stateModule');
 
     var angMods = [];
 
@@ -185,11 +185,11 @@ Generator.prototype.askForModules = function askForModules() {
     if (this.sanitizeModule) {
       angMods.push("'ngSanitize'");
     }
-    //if (this.routeModule) {
+    //if (this.stateModule) {
     //  angMods.push("'uiRouter'");
     //  this.env.options.uiRouter = true;
     //}
-    if (this.routeModule) {
+    if (this.stateModule) {
         angMods.push("'ui.router'");
         this.env.options.uiRouter = true;
     }

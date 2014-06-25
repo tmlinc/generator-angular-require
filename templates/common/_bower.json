@@ -11,7 +11,7 @@
     "bootstrap": "~3.0.3"<% } } %><% if (resourceModule) { %>,
     "angular-resource": "1.2.11"<% } %><% if (cookiesModule) { %>,
     "angular-cookies": "1.2.11"<% } %><% if (sanitizeModule) { %>,
-    "angular-sanitize": "1.2.11"<% } %><% if (routeModule) { %>,
+    "angular-sanitize": "1.2.11"<% } %><% if (stateModule) { %>,
     "angular-ui-router": "~0.2.10"<% } %>
   },
   "devDependencies": {
