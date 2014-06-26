@@ -27,8 +27,8 @@ Generator.prototype.rewriteAppJs = function () {
         ]
     };
 
-    config.splicable.unshift(".when('/" + this.name + "', {");
-    config.splicable.push("})");
+    //config.splicable.unshift(".when('/" + this.name + "', {");
+    //config.splicable.push("})");
 
     angularUtils.rewriteFile(config);
 };
