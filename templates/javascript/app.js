@@ -12,5 +12,5 @@ define(['angular']/*deps*/, function (angular)/*invoke*/ {
                   templateUrl: 'views/main.html',
                   controller: 'MainCtrl'
               });
-      });<% } %>;
+      })<% } %>;
 });
