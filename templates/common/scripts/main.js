@@ -25,7 +25,7 @@ window.name = 'NG_DEFER_BOOTSTRAP!';
 require([
   'angular',
   'app'<% if (stateModule) { %>,
-  'uiRouter'<% } %><% if (cookiesModule) { %>,
+  'angular-ui-router'<% } %><% if (cookiesModule) { %>,
   'angular-cookies'<% } %><% if (sanitizeModule) { %>,
   'angular-sanitize'<% } %><% if (resourceModule) { %>,
   'angular-resource'<% } %>
