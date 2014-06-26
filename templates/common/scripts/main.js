@@ -5,7 +5,7 @@ require.config({
   },
   shim: {
     'angular' : {'exports' : 'angular'}<% if (stateModule) { %>,
-    'uiRouter': ['angular']<% } %><% if (cookiesModule) { %>,
+    'angular-ui-router': ['angular']<% } %><% if (cookiesModule) { %>,
     'angular-cookies': ['angular']<% } %><% if (sanitizeModule) { %>,
     'angular-sanitize': ['angular']<% } %><% if (resourceModule) { %>,
     'angular-resource': ['angular']<% } %>,
